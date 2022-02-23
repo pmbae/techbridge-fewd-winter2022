@@ -54,16 +54,18 @@ let tbTextToFind = document.getElementById("tbTextToFind");
 function findInList() {
    //find In List
    let tbTextToFind = document.getElementById("tbTextToFind");
+   
   
-
-  let spans = document.getElementsByTagName('span');
+//collect the spans in a collection
+    let spans = document.getElementsByTagName('span');
     console.log("spans: ", spans);
-    for (let index = 0; index < spans.length; index++) {
+    for (let index = 0; index < spans.length; index++) {    //loop through to find the match between the given text and spans[index].innerHTML
         if (tbTextToFind.value === spans[index].innerHTML){
             spans[index].classList.add('spanHighlighted');
-            
+            break;
         }
-        
+
+       
         }
         
       
@@ -73,10 +75,11 @@ function findInList() {
         
     }
     
-    function validateForm() {
+    function validateInput() {
             // Get the value of the input field with id="tbTextToFind"
             let x = document.getElementById("tbTextToFind").value;
-            // If x is Not a Number or less than one or greater than 10
+            console.log(x);
+            // 
             let text;
             if (isNaN(x) || x < 1 || x > 10) {
               text = "Input not valid";
@@ -134,3 +137,24 @@ function sortIt() {
     final.appendChild(gone[t])
 } 
 }
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  function filterFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    div = document.getElementById("myDropdown");
+    a = div.getElementsByTagName("a");
+    for (i = 0; i < a.length; i++) {
+      txtValue = a[i].textContent || a[i].innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        a[i].style.display = "";
+      } else {
+        a[i].style.display = "none";
+      }
+    }
+  }

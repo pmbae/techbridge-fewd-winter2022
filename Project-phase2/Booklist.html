@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="Booklist.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body id="page2">
+    <header> 
+        <h1>Rareities Inventory Page</h1>
+    </header>
+
+    <div class="topnav">
+        <a class="active" href="#home">Add a New Book</a>
+        <input type="text" placeholder="Search..">
+        <a href="#about">Filter</a>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Sort By</button>
+            <div id="myDropdown" class="dropdown-content">
+              <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+              <a href="#about">Price (High to Low)</a>
+              <a href="#base">Price (Low to High)</a>
+              <a href="#blog">Author's Name</a>
+              <a href="#contact">Book Title</a>
+              <a href="#custom">Publication Year</a>
+              <a href="#support">Book Edition</a>
+              <a href="#tools">Genre</a>
+            </div>
+          </div>
+      </div>
+  <div id = "links">
+    <section cla>
+        <nav>
+          <ul>
+            <li><a href="#">Romance</a></li>
+            <li><a href="#">Sci-Fi</a></li>
+            <li><a href="#">Mystery</a></li>
+            <li><a href="#">Science</a></li>
+            <li><a href="#">Non-Fiction</a></li>
+          </ul>
+        </nav>
+    </div>   
+        <div id="books">
+          <div id="col" class="colu">
+              <div class="column center blue">
+                  <span id="span1-1">Book 1</span>
+              </div>
+              <div class="column center red">
+                  <span id="span1-2">Book 2</span>
+              </div>
+              <div class="column center yellow">
+                  <span id="span1-3">Book 3</span>
+              </div>
+              <div class="column center red">
+                  <span id="span2-1">Book 4</span>
+              </div>
+              <div class="column center yellow">
+                  <span id="span2-2">Book 5</span>
+              </div>
+              <div class="column center blue">
+                  <span id="span2-3">Book 6</span>
+              </div>
+              <div class="column center yellow">
+                  <span id="span3-1">Book 7</span>
+              </div>
+              <div class="column center red">
+                  <span id="span3-2">Book 8</span>
+              </div>
+              <div class="column center blue">
+                  <span id="span3-3">Book 9</span>
+              </div>
+          </div>
+      </div>  
+        
+    </section>
+
+    
+    
+
+    
+</body>
+</html>
+
