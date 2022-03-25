@@ -58,7 +58,7 @@
   .container1 {
     height: 300px;
     width: 40%;
-    background-color: white;
+    background-color: #F7E0D4;
     margin: 0 auto;
     border-style: solid;
     border-radius: 12px;
@@ -66,33 +66,26 @@
     position: relative;
   }
   
-  button{
+  .indexbtn{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     border: 2px solid red;
     border-radius: 12px;
     padding: 5px;
     height: 30px;
-    width: 100px;
-    margin: 10px 35px 0px 35px ;
+    width: 200px;
+    margin: 0 auto ;
   }
+  
 
-
-
-#page2{
-    background-color: papayawhip;
-  }
 
   header {
-    background-color: burlywood;
+    background-color:#347B98;
     padding: 15px;
     text-align: center;
     font-size: 20px;
     color: white;
   }
-  section {
-    display: -webkit-flex;
-    display: flex;
-  }
+  
 
   
 * {box-sizing: border-box;}
@@ -104,7 +97,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: wheat;
+  background-color: white;
 }
 
 .topnav a {
@@ -123,8 +116,8 @@ body {
 }
 
 .topnav a.active {
-  background-color: #2196F3;
-  color: white;
+  background-color: none;
+  color: black;
 }
 
 .topnav input[type=text] {
@@ -132,7 +125,6 @@ body {
   padding: 6px;
   margin-top: 8px;
   margin-right: 16px;
-  border: none;
   font-size: 17px;
 }
 
@@ -147,108 +139,111 @@ body {
   }
   
   .topnav input[type=text] {
-    border: 1px solid #ccc;  
+    border: px solid black;  
   }
 }
 
-#links{
-  float: left;
-}
 
-#books{
-  text-align: left;
-  display: flex;
-}
-
-/* styling for the column */
-.colu {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 100px
-}
-
-
-
-.controls {
-  margin: 20px;
-}
-
-.center {
-  text-align: center;
-}
-
-span {
-  padding-top: 40px;
-  height: 100%;
-  font-weight: bold;
-  font-size: x-large;
-}
-
-
-.blue {
-  background-color: blue;
-}
-
-.red {
-  background-color: red;
-}
-
-.yellow {
-  background-color: lightyellow
-}
-
-.dropbtn {
-    background-color: #2196F3;
-    color: #f6fbff;
-    padding: 16px;
-    font-size: 16px;
+  hr { /*dummy content*/
+    height: 6px;
     border: none;
-    cursor: pointer;
-    display: block;
+    background: rgba(0, 0, 0, 0.1);
+  } 
+  
+  hr:last-child {  /*dummy content*/
+    margin-right: 60%;
+  }
+  
+  hr.image { /*dummy content*/
+    padding-bottom: 50%;
+  } 
+  
+  .page {
+    padding: 2em;
+    background: #F7E0D4;
+    width: 85%;
+    margin: 0 0 0 auto;
+  }
+  
+  .archive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-gap: 1em;
+  }
+  
+  .article {
+    padding: 1em;
+    background: #fff;
+    box-shadow:
+      0 5px 10px rgba(0, 0, 0, 0.1),
+      0 20px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  #links {
+    padding: 2em;
+    background: #F7E0D4;
+    width: 15%;
+    margin: 0 auto 0 0;
     
   }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background-color: #3e8e41;
-  }
-  
-  #myInput {
-    box-sizing: border-box;
-    background-image: url('searchicon.png');
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #myInput:focus {outline: 3px solid #ddd;}
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    min-width: 230px;
-    overflow: auto;
-    border: 1px solid #ddd;
+
+  .bodywrap {
+    display: flex;
+    flex-direction: row;
     z-index: 1;
   }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+
+  #page1 {
+    background-image:url("../Project-phase1/images/bookimage1.jpeg");
+  } 
+
+  #page3 {
+    background-color: #F7E0D4;
   }
-  
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;}
+
+  .addbkform {
+    margin: 0 auto;
+    border-style: solid;
+    border-color: #092834; 
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    border-width: 3px;
+    box-shadow:  0 5px 10px rgba(0, 0, 0, 0.1),
+    0 20px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+
+
+  }
+  .image {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: block;
+
+  }
+
+  div.container{
+    align-self: flex-end;
+    padding: 12px;
+    position: relative;
+    top: 50%;
+  }
+
+  #myInput {
+    background-image: url('https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-512.png'); /* Add a search icon to input */
+    background-position: 5px 6px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+  }
+
+  .d-none {
+    display: none;
+  }
+
+  #signbtn{
+    position:relative;
+    top:0;
+    left:0;
+    float:right;
+  }

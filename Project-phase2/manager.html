@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory</title>
+    <link rel="stylesheet" href="Booklist.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body id="page2">
+    <header> 
+        <h1>Rareities Inventory Page</h1>
+        <button id="signbtn"><a href="../Project-phase1/index.html" >Sign Out</a>
+        </button>
+    </header>
+
+    <div class="topnav">
+        <a class="active" href="addbook.html">Add a New Book</a>
+        <input type="text" id="myInput"  placeholder="Search..">
+        <a href="manager.html">All Books</a>
+        
+    </div>
+    <div class="bodywrap">
+        <div id = "links">
+            <nav>
+                <h2>Genre</h2>
+            <ul>
+                <li><button onclick="romanceBooks();">Romance</button></li>
+                <li><button onclick="scifiBooks();">Science - Fiction</button></li>
+                <li><button onclick="mysteryBooks()">Mystery</button></li>
+                <li><button onclick="HistBooks();">Historical Fiction</button></li>
+                <li><button onclick="FictionBooks();">Fiction</button></li>
+            </ul>
+            </nav>
+
+            <!-- <div>
+                <h2>Sorty By:</h2>
+            <ul>
+                <input type="checkbox" id="pricehl" onclick="sortgrid()" name="pricehl" value="High to Low">
+                <label for="pricehl"> Price(High to Low)</label><br>
+
+                <input type="checkbox" id="pricelh" onclick="sortgrid()" name="pricelh" value="Low to High" >
+                <label for="pricelh"> Price(Low to High)</label><br>
+
+                <input type="checkbox" id="pubyr" onclick="sortgrid()" name="pubyr" value="Publication Year" >
+                <label for="pubyr"> Publication Year</label><br>
+                
+            </ul>
+            </div> -->
+        </div>   
+        <div class="page">
+            <h1 id="allbks">All Books</h1>
+            <div class="archive" id="mygrid">
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/515yCxCxbTL._AC_UY218_.jpg" alt= "Half-of-a-Yellow-Sun-fx" class= "image">
+                    <caption class="cap">
+                        <p>Half of a Yellow Sun </p>
+                        <p>By Chimamanda Ngozi-Adiche </p>
+                    </caption>
+                    <p class="genre">Historical Fiction</p>
+                    <p class="price">$29</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: New</p>
+                    <p class="publyr">Publication Year: 2010</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/61sjOtoaTVL._AC_UY218_.jpg" alt= "purplehibiscus" class= "image">
+                    <caption class="cap">
+                        <p>Purple Hibiscus </p>
+                        <p>By Chimamanda Ngozi-Adiche </p>
+                    </caption>
+                    <p class="genre">Fiction</p>
+                    <p class="price">$10</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: New</p>
+                    <p class="publyr">Publication Year: 2008</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/51iBSJtNp5L._AC_UY218_.jpg" alt= "purplehibiscus" class= "image">
+                    <caption class="cap">
+                        <p>The Art of Film: Working on James Bond, Aliens, Batman and More </p>
+                        <p>By Terry Ackland-Snow and Wendy Laybourn </p>
+                    </caption>
+                    <p class="genre"> Science - Fiction</p>
+                    <p class="price">$32</p>
+                    <p class="format">Format: Hardcover</p>
+                    <p class="con">Condition: New</p>
+                    <p class="publyr">Publication Year: 1999</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/61iA5pgysxL._AC_UY218_.jpg" alt= "One bad Thing" class= "image">
+                    <caption class="cap">
+                        <p>One Bad Thing </p>
+                        <p>M.K. Hill </p>
+                    </caption>
+                    <p class="genre">Mystery</p>
+                    <p class="price">$25</p>
+                    <p class="format">Format: Hardcover</p>
+                    <p class="con">Condition: Used</p>
+                    <p class="publyr">Publication Year: 2005</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/71bclxm1DCL._AC_UY218_.jpg" alt= "Girl class Case" class= "image">
+                    <caption class="cap">
+                        <p>The Girl in the Glass Case: Keep your girls safe. Boys safer. </p>
+                        <p>By Devashish Sardana  </p>
+                    </caption>
+                    <p class="genre">Mystery</p>
+                    <p class="price">$7</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: Good</p>
+                    <p class="publyr">Publication Year: 2002</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/81ImXaI4O2L._AC_UY218_.jpg" alt= "Bone Readers" class= "image">
+                    <caption class="cap">
+                        <p>Bone Readers </p>
+                        <p>By Jacob Ross  </p>
+                    </caption>
+                    <p class="genre">Mystery</p>
+                    <p class="price">$15</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: New</p>
+                    <p class="publyr">Publication Year: 2009</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/71fKyX3Q-ML._AC_UY218_.jpg" alt= "Puppet Show" class= "image">
+                    <caption class="cap">
+                        <p>Puppet Show (Washington Poe) </p>
+                        <p>By M. W. Craven </p>
+                    </caption>
+                    <p class="genre">Mystery</p>
+                    <p class="price">$9</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: Good</p>
+                    <p class="publyr">Publication Year: 2006</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/81ZBpvmYTHL._AC_UY218_.jpg" alt= "The Lady's Mine" class= "image">
+                    <caption class="cap">
+                        <p>The Lady's Mine </p>
+                        <p>By Francine Rivers</p>
+                    </caption>
+                    <p class="genre">Romance</p>
+                    <p class="price">$33</p>
+                    <p class="format">Format: Library Binding</p>
+                    <p class="con">Condition: Fairly Used</p>
+                    <p class="publyr">Publication Year: 2003</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/81hDv9bqw0L._AC_UY218_.jpg" alt= "One Italian Summer" class= "image">
+                    <caption class="cap">
+                        <p>One Italian Summer </p>
+                        <p>By Rebecca Serle </p>
+                    </caption>
+                    <p class="genre">Romance</p>
+                    <p class="price">$35</p>
+                    <p class="format">Format: Library Binding</p>
+                    <p class="con">Condition: Used</p>
+                    <p class="publyr">Publication Year: 2005</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/71I7krAJe5L._AC_UY218_.jpg" alt= "confidence of Wildflowers" class= "image">
+                    <caption class="cap">
+                        <p>The Confidence of Wildflowers </p>
+                        <p>By Micalea Smeltzer  </p>
+                    </caption>
+                    <p class="genre">Romance</p>
+                    <p class="price">$21</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: New</p>
+                    <p class="publyr">Publication Year: 2018</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/71nWmJ4s2EL._AC_UY218_.jpg" alt= "All that we have lost" class= "image">
+                    <caption class="cap">
+                        <p>All That We Have Lost </p>
+                        <p>By Suzanne Fortin  </p>
+                    </caption>
+                    <p class="genre">Romance</p>
+                    <p class="price">$14</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: New</p>
+                    <p class="publyr">Publication Year: 2012</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/61jNDLLnlgS._AC_UY218_.jpg" alt= "midnight in the snow" class= "image">
+                    <caption class="cap">
+                        <p>Midnight in the Snow </p>
+                        <p>By Karen Swan  </p>
+                    </caption>
+                    <p class="genre">Romance</p>
+                    <p class="price">$14</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: Good</p>
+                    <p class="publyr">Publication Year: 2015</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/81x-CEU9q2L._AC_UY218_.jpg" alt= "Sun Eater" class= "image">
+                    <caption class="cap">
+                        <p>Kingdoms of Death (Sun Eater) </p>
+                        <p>By Christopher Ruocchio </p>
+                    </caption>
+                    <p class="genre">Science - Fiction</p>
+                    <p class="price">$24</p>
+                    <p class="format">Format: Hardcover</p>
+                    <p class="con">Condition: New</p>
+                    <p class="publyr">Publication Year: 2019</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/714V73ocL+L._AC_UY218_.jpg" alt= "atlas six" class= "image">
+                    <caption class="cap">
+                        <p>The Atlas Six </p>
+                        <p>By Olivie Blake  </p>
+                    </caption>
+                    <p class="genre">Science - Fiction</p>
+                    <p class="price">$17</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: Fairly Used</p>
+                    <p class="publyr">Publication Year: 1998</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                
+                </article>
+                <article class="article">
+                    <img src="https://m.media-amazon.com/images/I/81bprmrW9QL._AC_UY218_.jpg" alt= "Timelash" class= "image">
+                    <caption class="cap">
+                        <p>Doctor Who: Timelash: 6th Doctor Novelisation </p>
+                        <p>By Glen McCoy </p>
+                    </caption>
+                    <p class="genre">Science - Fiction</p>
+                    <p class="price">$25</p>
+                    <p class="format">Format: Paperback</p>
+                    <p class="con">Condition: Used</p>
+                    <p class="publyr">Publication Year: 1989</p>
+                    <button>Update</button>
+                    <button>Delete</button>
+                </article>
+            </div>
+        </div>
+    </div>
+        
+    
+
+    
+    
+
+    
+</body>
+</html>
+

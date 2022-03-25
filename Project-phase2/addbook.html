@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <link rel="stylesheet" href="Booklist.css">
+
+</head>
+<body id="page3">
+    <header> 
+        <h1>Rareities Inventory Page</h1>
+    </header>
+
+    <div class="addbkform">
+        <label for="bkname">Enter Book Name: </label>
+        <input type="text" id="bkname" name="bkname" placeholder="Eg. Pride and Prejudice"><br>
+        <label for="authname">Enter Author Name: </label>
+        <input type="text" id="authname" name="authname" placeholder="Eg. Charles Dickens"><br>
+
+        <label for="genre">Enter Genre: </label>
+        <input type="text" id="genre" name="genre" placeholder="Eg. Sci-Fi"><br>
+        <!-- <label for="publiyr">Publication Year: </label>
+        <input type="text" id="publiyr" name="publiyr" placeholder="Eg. 1988"><br> -->
+        <label for="price">Book Price: </label>
+        <input type="text" id="price" name="price" placeholder="Eg. $10"><br>
+        <label for="imgsrc">Image Url: </label>
+        <input type="text" id="imgsrc" name="imgsrc" placeholder="Eg. www.abook.jpg"><br>
+
+        <label for="condition">Condition of Book:</label>
+        <select name="condition" id="condition">
+            <option value="New">New</option>
+            <option value="lkNew"> Like New</option>
+            <option value="fairlyused">Fairly Used</option>
+            <option value="good">Good</option>
+            <option value="Poor">Poor</option>
+        </select>
+        <br><br>
+        <button onclick="makeFlex();">Save</button>
+
+
+
+
+    </div>
+
+</body>
+</html>
